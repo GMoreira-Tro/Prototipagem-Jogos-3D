@@ -1,0 +1,8 @@
+Tema: Defend It
+
+Ideia inicial: Jogador terá que lidar com hordas de inimigos, que tentarão destruir a torre de defesa. O jogo
+termina quando o jogador morrer ou a torre ser destruída. A torre pode fornecer buffs ao jogador de tempos em
+tempos proporcional à saúde que ela tiver.
+
+Trabalharemos em branchs separadas e depois juntaremos na 'main'. A minha (Guilherme) branch raiz vai se chamar:
+'Guilherme'.
