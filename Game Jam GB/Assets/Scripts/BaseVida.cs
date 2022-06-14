@@ -18,7 +18,9 @@ public class BaseVida : MonoBehaviour
         vidaAtual -= dano;
 
         if (vidaAtual > 0)        
+        {
             barraVida.value = vidaAtual / vida;
+        }
 
         return vidaAtual;
     }

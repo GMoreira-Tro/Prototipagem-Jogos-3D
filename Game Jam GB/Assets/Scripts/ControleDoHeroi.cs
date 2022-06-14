@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -12,7 +13,16 @@ public class ControleDoHeroi : MonoBehaviour
     //Públicos
     public float velocidade = 10.0f;
     public Bala bala;
+    [HideInInspector]
+    public static int inimigosMortos = 0;
 
+    public GameObject inimigoPrefab;
+    private int inimigosSpawnados = 1;
+
+    private void Awake()
+    {
+        StartCoroutine(SpawnInimigos());
+    }
     private void Start()
     {        
         charCtrl = GetComponent<CharacterController>();
@@ -51,5 +61,18 @@ public class ControleDoHeroi : MonoBehaviour
                 instBala.GetComponent<Rigidbody>().AddForce(transform.forward * bala.velocidadeBala);
                 Destroy(instBala, 5f);
             }
-    }    
+    }
+
+    private IEnumerator SpawnInimigos()
+    {
+        Debug.Log("Spawnou");
+        yield return new WaitForSeconds(5);
+        Instantiate(inimigoPrefab);
+        inimigosSpawnados++;
+
+        if (inimigosSpawnados < 10)
+        {
+            StartCoroutine(SpawnInimigos());
+        }
+    }
 }

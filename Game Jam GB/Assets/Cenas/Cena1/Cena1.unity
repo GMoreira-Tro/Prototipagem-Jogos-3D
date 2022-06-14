@@ -259,6 +259,10 @@ PrefabInstance:
       propertyPath: bala
       value: 
       objectReference: {fileID: -9089470737480012033, guid: 54268519d687af04282cac1dd656b3e5, type: 3}
+    - target: {fileID: 2997456540466738534, guid: eb1130f2196d1ac498fd5084a4daf192, type: 3}
+      propertyPath: inimigoPrefab
+      value: 
+      objectReference: {fileID: 1283117893922010143, guid: f71b4478787e99d439722b928d0d0342, type: 3}
     - target: {fileID: 5466672709764840450, guid: eb1130f2196d1ac498fd5084a4daf192, type: 3}
       propertyPath: m_Name
       value: objPersonagem

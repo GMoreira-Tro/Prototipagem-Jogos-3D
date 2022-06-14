@@ -9,7 +9,7 @@ public class CameraMover : MonoBehaviour
     public float rotationSpeed = 4.0f, zoomSpeed = 2.0f;
     public Transform Target, Player;
 
-    void Start()
+    private void Start()
     {
         mouseX = Player.rotation.eulerAngles.y;
         Obstruction = Target;
@@ -24,7 +24,7 @@ public class CameraMover : MonoBehaviour
     }
 
 
-    void CamControl()
+    private void CamControl()
     {
         mouseX += Input.GetAxis("Mouse X") * rotationSpeed;
         mouseY -= Input.GetAxis("Mouse Y") * rotationSpeed;
@@ -43,8 +43,7 @@ public class CameraMover : MonoBehaviour
         }
     }
 
-
-    void ViewObstructed()
+    private void ViewObstructed()
     {
         RaycastHit hit;
 

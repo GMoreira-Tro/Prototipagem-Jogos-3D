@@ -14,7 +14,7 @@ public class Inimigos : MonoBehaviour
     private BaseVida objDano;    
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         player = GameObject.FindWithTag("Player");
         torre = GameObject.FindWithTag("torre");
@@ -25,14 +25,18 @@ public class Inimigos : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if ((navMesh != null) && (player != null) && (torre != null))
         {
             if (alvoPlayer)
+            {
                 navMesh.destination = player.transform.position;
+            }
             else
+            {
                 navMesh.destination = torre.transform.position;
+            }
 
             if (objDano != null)
             {
@@ -76,6 +80,8 @@ public class Inimigos : MonoBehaviour
             return objDanoInt.CausaDanos(dano);
         }
         else
+        {
             return 0;
+        }
     }
 }
